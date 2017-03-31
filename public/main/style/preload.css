@@ -1,0 +1,79 @@
+#preload{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    margin: 0; left: 0; top: 0;
+    z-index: 2;
+}
+
+#sun_ray {
+    background-color: #FF5722;
+    width: 80px;
+    height: 80px;
+    position: relative;
+    left: calc(50% - 40px); top: calc(50% - 40px);
+    text-align: center;
+}
+#sun_ray:before, #sun_ray:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 80px;
+    width: 80px;
+    background-color: #FF5722;
+}
+#sun_ray:before {
+    -webkit-transform: rotate(30deg);
+       -moz-transform: rotate(30deg);
+        -ms-transform: rotate(30deg);
+         -o-transform: rotate(30deg);
+}
+#sun_ray:after {
+    -webkit-transform: rotate(60deg);
+       -moz-transform: rotate(60deg);
+        -ms-transform: rotate(60deg);
+         -o-transform: rotate(60deg);
+}
+
+#sun_core{
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    left: calc(50% - 35px); top: calc(50% - 35px);
+    border-radius: 50%;
+    background-color: #FF9800;
+    z-index: 6;
+}
+#Earths_orbit{
+	position: absolute;
+    width: 300px;
+    height: 300px;
+    left: calc(50% - 150px); top: calc(50% - 150px);
+    border-radius: 50%;
+}
+#Earth{
+	display: block; 
+	background-color: #009688; 
+	position: absolute; top: 0; left: 0; 
+	width: 20px; 
+	height: 20px; 
+	transition: all 0.5s ease; 
+	border-radius: 50%;
+	border: 1px solid transparent; 
+}
+
+#preload.rotat #sun_ray, #preload.rotat #Earths_orbit, #preload.rotat #Earth{
+    animation-name: spin;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+@keyframes spin {
+    from {
+        transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(360deg);
+    }
+}

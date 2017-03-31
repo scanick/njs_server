@@ -1,0 +1,37 @@
+@import url(font.css);
+@import url(nav.css);
+@import url(preload.css);
+
+body{
+	margin: 0;
+	overflow: hidden;
+	padding: 0;
+}
+
+
+#main_field{
+	position: absolute;
+	left:0;
+	top: 0;
+	z-index: 1;
+}
+
+#log_sign{
+	position: absolute;
+	right: 0;
+	top: 1%;
+	z-index: 2;
+}
+#log_sign_icon{height:40px; width:40px; display:block; position:relative;} 
+
+#log_sign_icon:before{content:''; height:12px; width:16px; display:b; border:6px solid #333; border-bottom:none; border-radius:50px 50px 0 0;-webkit-border-radius:50px 50px 0 0;-moz-border-radius:50px 50px 0 0; position:absolute; top:0px; left:6px; }
+
+#log_sign_icon:after{content:''; height:12px; width:28px; border-radius:4px;-webkit-border-radius:4px;-moz-border-radius:4px; border:6px solid #333; position:absolute; top:16px; left:0px;}
+
+#login{
+	
+	background-color: #26c6da;
+	box-shadow: 0 0 5px rgba(0,0,0,0.2);
+	
+	text-color: red;
+}
